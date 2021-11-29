@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "367489585097",
+    "project_id": "phone-login-test-83732",
+    "storage_bucket": "phone-login-test-83732.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367489585097:android:e18b5c804efd87f87f2218",
+        "android_client_info": {
+          "package_name": "com.EricJahja.phone_login_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367489585097-fhnh2bo8jqflb6qk950rgvd14qrls412.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.EricJahja.phone_login_test",
+            "certificate_hash": "3586ee7c40395db928e12bd61042ca75692236bb"
+          }
+        },
+        {
+          "client_id": "367489585097-vt81j99v5ck6rlafbe0lq94thqkifrfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEco6Hbf50c3hlYhrREs5XA348Qn6KKyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367489585097-vt81j99v5ck6rlafbe0lq94thqkifrfj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
