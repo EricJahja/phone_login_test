@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:phone_login_test/login_screen.dart';
+import 'package:phone_login_test/landing_page.dart';
+import 'package:phone_login_test/phone_authentication.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +20,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: LandingPage(),
+      routes: {
+        'PhoneAuthentication': (context) => const PhoneAuthentication(action: 'login'),
+      }
     );
   }
 }

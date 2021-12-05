@@ -3,20 +3,30 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:phone_login_test/otp_controller.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class PhoneAuthentication extends StatefulWidget {
+  const PhoneAuthentication({Key? key, required this.action}) : super(key: key);
+
+  final String action;
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _PhoneAuthenticationState createState() => _PhoneAuthenticationState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _PhoneAuthenticationState extends State<PhoneAuthentication> {
 
   String dialCodeDigits = '+62';
   TextEditingController numberController = TextEditingController();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print(widget.action);
+  }
+
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -77,10 +87,12 @@ class _LoginScreenState extends State<LoginScreen> {
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => OTPControllerScreen(
-                        phone: numberController.text,
-                        codeDigits: dialCodeDigits
-                      )));
+                    MaterialPageRoute(builder: (context) => OTPControllerScreen(
+                      phone: numberController.text,
+                      codeDigits: dialCodeDigits,
+                      action: widget.action,
+                    )),
+                  );
                 },
                 child: const Text(
                   'Next',
@@ -91,7 +103,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-
           ],
         ),
       ),
