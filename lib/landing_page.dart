@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:phone_login_test/email_authentication.dart';
+import 'package:phone_login_test/login_screen.dart';
 import 'package:phone_login_test/phone_authentication.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+
+class LandingPage extends StatelessWidget {
+  const LandingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,28 +15,28 @@ class LoginScreen extends StatelessWidget {
         children: <Widget>[
           Center(
             child: ElevatedButton(
-              child: Text('Log In with email'),
+              child: Text('REGISTER'),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EmailAuthentication())
+                  MaterialPageRoute(builder: (context) => PhoneAuthentication(action: 'login'))
                 );
               },
             ),
           ),
           Center(
             child: ElevatedButton(
-              child: Text('Log In with Phone Number'),
+              child: Text('LOGIN'),
               onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PhoneAuthentication(action: 'login'))
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen())
                 );
               },
             ),
           ),
         ]
-      )
+      ),
     );
   }
 }
